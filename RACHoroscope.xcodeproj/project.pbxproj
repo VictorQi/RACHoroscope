@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D9EBE6493537AA11F28F6BC /* libPods-RACHoroscope.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1313DB1C5144A1C9613E14FE /* libPods-RACHoroscope.a */; };
 		B631922A1E75999300390319 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B63192291E75999300390319 /* main.m */; };
 		B631922D1E75999300390319 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B631922C1E75999300390319 /* AppDelegate.m */; };
 		B63192301E75999300390319 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B631922F1E75999300390319 /* ViewController.m */; };
 		B63192331E75999300390319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63192311E75999300390319 /* Main.storyboard */; };
-		B63192351E75999300390319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B63192341E75999300390319 /* Assets.xcassets */; };
 		B63192381E75999300390319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63192361E75999300390319 /* LaunchScreen.storyboard */; };
+		B6B0C8021E7F7D58007E5ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B0C8011E7F7D58007E5ADB /* Assets.xcassets */; };
+		B6B0C8081E7F81D0007E5ADB /* NSString+Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B0C8071E7F81D0007E5ADB /* NSString+Validator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1313DB1C5144A1C9613E14FE /* libPods-RACHoroscope.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RACHoroscope.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F1969FB5BE7903D99D68752 /* Pods-RACHoroscope.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACHoroscope.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACHoroscope/Pods-RACHoroscope.release.xcconfig"; sourceTree = "<group>"; };
 		B63192251E75999300390319 /* RACHoroscope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACHoroscope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63192291E75999300390319 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B631922B1E75999300390319 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -23,9 +27,13 @@
 		B631922E1E75999300390319 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B631922F1E75999300390319 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B63192321E75999300390319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B63192341E75999300390319 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B63192371E75999300390319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B63192391E75999300390319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6B0C8001E7F76DD007E5ADB /* Horoscope.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Horoscope.pch; sourceTree = "<group>"; };
+		B6B0C8011E7F7D58007E5ADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B6B0C8061E7F81D0007E5ADB /* NSString+Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validator.h"; sourceTree = "<group>"; };
+		B6B0C8071E7F81D0007E5ADB /* NSString+Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validator.m"; sourceTree = "<group>"; };
+		E4C03DFED8D612CB23FE4855 /* Pods-RACHoroscope.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACHoroscope.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACHoroscope/Pods-RACHoroscope.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D9EBE6493537AA11F28F6BC /* libPods-RACHoroscope.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9665C9B60850880CA0858FC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4C03DFED8D612CB23FE4855 /* Pods-RACHoroscope.debug.xcconfig */,
+				2F1969FB5BE7903D99D68752 /* Pods-RACHoroscope.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B631921C1E75999300390319 = {
 			isa = PBXGroup;
 			children = (
 				B63192271E75999300390319 /* RACHoroscope */,
 				B63192261E75999300390319 /* Products */,
+				9665C9B60850880CA0858FC7 /* Pods */,
+				D3797BF24BA7B6C48142665A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +78,14 @@
 		B63192271E75999300390319 /* RACHoroscope */ = {
 			isa = PBXGroup;
 			children = (
+				B6B0C8001E7F76DD007E5ADB /* Horoscope.pch */,
 				B631922B1E75999300390319 /* AppDelegate.h */,
 				B631922C1E75999300390319 /* AppDelegate.m */,
-				B631922E1E75999300390319 /* ViewController.h */,
-				B631922F1E75999300390319 /* ViewController.m */,
-				B63192311E75999300390319 /* Main.storyboard */,
-				B63192341E75999300390319 /* Assets.xcassets */,
 				B63192361E75999300390319 /* LaunchScreen.storyboard */,
 				B63192391E75999300390319 /* Info.plist */,
+				B6B0C8051E7F818D007E5ADB /* Framework Extensions */,
+				B6B0C8031E7F8143007E5ADB /* Views */,
+				B6B0C8041E7F8157007E5ADB /* Stroryboard & Assets */,
 				B63192281E75999300390319 /* Supporting Files */,
 			);
 			path = RACHoroscope;
@@ -79,6 +99,41 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B6B0C8031E7F8143007E5ADB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B631922E1E75999300390319 /* ViewController.h */,
+				B631922F1E75999300390319 /* ViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B6B0C8041E7F8157007E5ADB /* Stroryboard & Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B63192311E75999300390319 /* Main.storyboard */,
+				B6B0C8011E7F7D58007E5ADB /* Assets.xcassets */,
+			);
+			name = "Stroryboard & Assets";
+			sourceTree = "<group>";
+		};
+		B6B0C8051E7F818D007E5ADB /* Framework Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B6B0C8061E7F81D0007E5ADB /* NSString+Validator.h */,
+				B6B0C8071E7F81D0007E5ADB /* NSString+Validator.m */,
+			);
+			name = "Framework Extensions";
+			sourceTree = "<group>";
+		};
+		D3797BF24BA7B6C48142665A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1313DB1C5144A1C9613E14FE /* libPods-RACHoroscope.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B631923C1E75999300390319 /* Build configuration list for PBXNativeTarget "RACHoroscope" */;
 			buildPhases = (
+				656BFA0001B1F33892FC69D9 /* [CP] Check Pods Manifest.lock */,
 				B63192211E75999300390319 /* Sources */,
 				B63192221E75999300390319 /* Frameworks */,
 				B63192231E75999300390319 /* Resources */,
+				0EE4CF16CCB0530A3D4DE62C /* [CP] Embed Pods Frameworks */,
+				A22D436B7D2D7A824110CAA3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,18 +197,67 @@
 			buildActionMask = 2147483647;
 			files = (
 				B63192381E75999300390319 /* LaunchScreen.storyboard in Resources */,
-				B63192351E75999300390319 /* Assets.xcassets in Resources */,
+				B6B0C8021E7F7D58007E5ADB /* Assets.xcassets in Resources */,
 				B63192331E75999300390319 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0EE4CF16CCB0530A3D4DE62C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACHoroscope/Pods-RACHoroscope-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		656BFA0001B1F33892FC69D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A22D436B7D2D7A824110CAA3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACHoroscope/Pods-RACHoroscope-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B63192211E75999300390319 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6B0C8081E7F81D0007E5ADB /* NSString+Validator.m in Sources */,
 				B63192301E75999300390319 /* ViewController.m in Sources */,
 				B631922D1E75999300390319 /* AppDelegate.m in Sources */,
 				B631922A1E75999300390319 /* main.m in Sources */,
@@ -269,9 +376,12 @@
 		};
 		B631923D1E75999300390319 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4C03DFED8D612CB23FE4855 /* Pods-RACHoroscope.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YZ2L42YQ8T;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RACHoroscope/Horoscope.pch";
 				INFOPLIST_FILE = RACHoroscope/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = v.q.RACHoroscope;
@@ -281,9 +391,12 @@
 		};
 		B631923E1E75999300390319 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F1969FB5BE7903D99D68752 /* Pods-RACHoroscope.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YZ2L42YQ8T;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RACHoroscope/Horoscope.pch";
 				INFOPLIST_FILE = RACHoroscope/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = v.q.RACHoroscope;
@@ -310,6 +423,7 @@
 				B631923E1E75999300390319 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

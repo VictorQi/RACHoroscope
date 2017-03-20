@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,120 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQ3-CM-ztx">
+                                <rect key="frame" x="16" y="30" width="59" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDe-v3-NCR">
+                                <rect key="frame" x="16" y="101" width="55" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIY-I6-O0V">
+                                <rect key="frame" x="16" y="172" width="41" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96n-86-JZe">
+                                <rect key="frame" x="16" y="132" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tec-q8-Mc5">
+                                <rect key="frame" x="16" y="203" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1O-A4-VtU">
+                                <rect key="frame" x="16" y="248" width="108" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="woman" image="unchecked">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" image="checked"/>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="O9O-wG-olm">
+                                <rect key="frame" x="16" y="302" width="343" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="511670740.47509998">
+                                    <!--2017-03-20 02:45:40 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mec-fv-PGo">
+                                <rect key="frame" x="132" y="624" width="227" height="38"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Check your horoscope"/>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZbT-VU-PZ8">
+                                <rect key="frame" x="16" y="61" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OC4-0r-Xzr">
+                                <rect key="frame" x="281" y="248" width="78" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="man" image="unchecked">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" image="checked"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mec-fv-PGo" secondAttribute="trailing" id="15z-p7-guW"/>
+                            <constraint firstItem="ZbT-VU-PZ8" firstAttribute="top" secondItem="IQ3-CM-ztx" secondAttribute="bottom" constant="5" id="3pa-pt-XcU"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ZbT-VU-PZ8" secondAttribute="leading" id="76v-a3-4jd"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="WIY-I6-O0V" secondAttribute="leading" id="8f1-hW-mAB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZbT-VU-PZ8" secondAttribute="trailing" id="DHl-v6-CMD"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="O9O-wG-olm" secondAttribute="leading" id="GXR-0w-Fiv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OC4-0r-Xzr" secondAttribute="trailing" id="I04-GW-yR1"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="h1O-A4-VtU" secondAttribute="leading" id="JdE-5n-yvT"/>
+                            <constraint firstItem="PDe-v3-NCR" firstAttribute="top" secondItem="ZbT-VU-PZ8" secondAttribute="bottom" constant="10" id="Lx0-sk-C7k"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="PDe-v3-NCR" secondAttribute="leading" id="MMJ-SD-Dz2"/>
+                            <constraint firstItem="IQ3-CM-ztx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Nk0-1k-kHG"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="IQ3-CM-ztx" secondAttribute="leading" id="Pb8-1m-3VD"/>
+                            <constraint firstItem="WIY-I6-O0V" firstAttribute="top" secondItem="96n-86-JZe" secondAttribute="bottom" constant="10" id="RNb-Wh-ONc"/>
+                            <constraint firstItem="O9O-wG-olm" firstAttribute="top" secondItem="h1O-A4-VtU" secondAttribute="bottom" constant="20" id="SQu-U0-9aO"/>
+                            <constraint firstItem="h1O-A4-VtU" firstAttribute="top" secondItem="tec-q8-Mc5" secondAttribute="bottom" constant="15" id="TDB-Vr-m28"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tec-q8-Mc5" secondAttribute="trailing" id="W5b-M4-4Mv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mec-fv-PGo" secondAttribute="bottom" constant="5" id="XqX-An-6nk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="96n-86-JZe" secondAttribute="trailing" id="dj5-GC-Tyh"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="96n-86-JZe" secondAttribute="leading" id="eDz-OG-uFX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O9O-wG-olm" secondAttribute="trailing" id="qtj-Kz-44C"/>
+                            <constraint firstItem="tec-q8-Mc5" firstAttribute="top" secondItem="WIY-I6-O0V" secondAttribute="bottom" constant="5" id="riG-mV-YbO"/>
+                            <constraint firstItem="Mec-fv-PGo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="O9O-wG-olm" secondAttribute="bottom" constant="5" id="sXc-Of-J6m"/>
+                            <constraint firstItem="96n-86-JZe" firstAttribute="top" secondItem="PDe-v3-NCR" secondAttribute="bottom" constant="5" id="uTk-ES-wI1"/>
+                            <constraint firstItem="OC4-0r-Xzr" firstAttribute="centerY" secondItem="h1O-A4-VtU" secondAttribute="centerY" id="xcK-lr-OrO"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="tec-q8-Mc5" secondAttribute="leading" id="yda-GY-mHf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="checkButton" destination="Mec-fv-PGo" id="kn4-XN-UAW"/>
+                        <outlet property="cityTextField" destination="tec-q8-Mc5" id="plT-bh-aqh"/>
+                        <outlet property="datePicker" destination="O9O-wG-olm" id="of3-Gh-Cc4"/>
+                        <outlet property="emailTextField" destination="96n-86-JZe" id="jmV-Up-jze"/>
+                        <outlet property="manButton" destination="OC4-0r-Xzr" id="KV2-Up-GXe"/>
+                        <outlet property="nameTextField" destination="ZbT-VU-PZ8" id="tST-oA-Jt6"/>
+                        <outlet property="womanButton" destination="h1O-A4-VtU" id="c9A-1L-rmB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116.25" y="122.53521126760563"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checked" width="34" height="34"/>
+        <image name="unchecked" width="34" height="34"/>
+    </resources>
 </document>
