@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +21,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQ3-CM-ztx">
@@ -41,13 +43,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96n-86-JZe">
-                                <rect key="frame" x="16" y="132" width="343" height="30"/>
+                                <rect key="frame" x="16" y="132" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tec-q8-Mc5">
-                                <rect key="frame" x="16" y="203" width="343" height="30"/>
+                                <rect key="frame" x="16" y="203" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -61,13 +63,13 @@
                                 <state key="selected" image="checked"/>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="O9O-wG-olm">
-                                <rect key="frame" x="16" y="302" width="343" height="216"/>
+                                <rect key="frame" x="16" y="302" width="288" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="511670740.47509998">
                                     <!--2017-03-20 02:45:40 +0000-->
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mec-fv-PGo">
-                                <rect key="frame" x="132" y="624" width="227" height="38"/>
+                                <rect key="frame" x="77" y="525" width="227" height="38"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="Check your horoscope"/>
                                 <state key="disabled">
@@ -75,13 +77,13 @@
                                 </state>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZbT-VU-PZ8">
-                                <rect key="frame" x="16" y="61" width="343" height="30"/>
+                                <rect key="frame" x="16" y="61" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OC4-0r-Xzr">
-                                <rect key="frame" x="281" y="248" width="78" height="34"/>
+                                <rect key="frame" x="226" y="248" width="78" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="man" image="unchecked">
                                     <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -126,14 +128,120 @@
                         <outlet property="manButton" destination="OC4-0r-Xzr" id="KV2-Up-GXe"/>
                         <outlet property="nameTextField" destination="ZbT-VU-PZ8" id="tST-oA-Jt6"/>
                         <outlet property="womanButton" destination="h1O-A4-VtU" id="c9A-1L-rmB"/>
+                        <segue destination="Qq1-ra-Xrc" kind="show" identifier="feel" id="YMj-I7-ykq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116.25" y="122.53521126760563"/>
         </scene>
+        <!--Feeling View Controller-->
+        <scene sceneID="wIw-WZ-6R7">
+            <objects>
+                <viewController id="Qq1-ra-Xrc" customClass="FeelingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OqW-ZX-B8t"/>
+                        <viewControllerLayoutGuide type="bottom" id="f72-4i-ddX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UTW-1T-1TF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passion level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q0-e1-jOL">
+                                <rect key="frame" x="16" y="65" width="131" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happiness level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGr-0j-VoP">
+                                <rect key="frame" x="16" y="296" width="159" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDH-gu-sdS">
+                                <rect key="frame" x="16" y="406" width="39" height="25.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jct-TV-VYx">
+                                <rect key="frame" x="238" y="405" width="66" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="p8e-xT-Dsd">
+                                <rect key="frame" x="14" y="343" width="292" height="31"/>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="nlN-0e-8hC">
+                                <rect key="frame" x="150" y="190" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="3RE-fO-FI9"/>
+                                    <constraint firstAttribute="width" secondItem="nlN-0e-8hC" secondAttribute="height" multiplier="1:1" id="ym7-UH-uIZ"/>
+                                </constraints>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bpp-V5-fQy">
+                                <rect key="frame" x="135.5" y="403" width="51" height="31"/>
+                            </switch>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minimumValue="20" maximumValue="100" stepValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="lCH-QY-hTI">
+                                <rect key="frame" x="210" y="64" width="94" height="29"/>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel right now?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaj-rd-GVP">
+                                <rect key="frame" x="12" y="519" width="297" height="29"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldItalicMT" family="Times New Roman" pointSize="26"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glN-Gt-ZxG">
+                                <rect key="frame" x="49" y="455" width="222" height="38"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Check your horoscope">
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nlN-0e-8hC" firstAttribute="centerY" secondItem="lCH-QY-hTI" secondAttribute="bottom" constant="107" id="3aU-Ho-2nP"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="p8e-xT-Dsd" secondAttribute="leading" id="5LV-Df-ana"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="UGr-0j-VoP" secondAttribute="leading" id="8d4-hX-WFS"/>
+                            <constraint firstItem="f72-4i-ddX" firstAttribute="top" secondItem="uaj-rd-GVP" secondAttribute="bottom" constant="20" id="9db-2l-4i7"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="QDH-gu-sdS" secondAttribute="leading" id="Ft3-NP-0w7"/>
+                            <constraint firstItem="UGr-0j-VoP" firstAttribute="top" secondItem="3Q0-e1-jOL" secondAttribute="bottom" constant="205" id="JAL-Am-a6m"/>
+                            <constraint firstItem="bpp-V5-fQy" firstAttribute="centerY" secondItem="jct-TV-VYx" secondAttribute="centerY" id="Wlo-rt-iNQ"/>
+                            <constraint firstItem="glN-Gt-ZxG" firstAttribute="centerX" secondItem="UTW-1T-1TF" secondAttribute="centerX" id="Xi2-wW-N3Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lCH-QY-hTI" secondAttribute="trailing" id="YCF-XZ-Al9"/>
+                            <constraint firstItem="bpp-V5-fQy" firstAttribute="centerY" secondItem="QDH-gu-sdS" secondAttribute="centerY" id="a9M-mA-BQD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jct-TV-VYx" secondAttribute="trailing" id="aiW-MW-Mlz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3Q0-e1-jOL" secondAttribute="leading" id="bLB-XA-fxn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p8e-xT-Dsd" secondAttribute="trailing" id="bgR-Jk-Muc"/>
+                            <constraint firstItem="bpp-V5-fQy" firstAttribute="centerX" secondItem="UTW-1T-1TF" secondAttribute="centerX" id="cqy-4F-xtq"/>
+                            <constraint firstItem="uaj-rd-GVP" firstAttribute="centerX" secondItem="UTW-1T-1TF" secondAttribute="centerX" id="gTg-kG-Yre"/>
+                            <constraint firstItem="lCH-QY-hTI" firstAttribute="centerY" secondItem="3Q0-e1-jOL" secondAttribute="centerY" id="hSA-Rb-EQM"/>
+                            <constraint firstItem="nlN-0e-8hC" firstAttribute="centerX" secondItem="UTW-1T-1TF" secondAttribute="centerX" id="iyJ-f9-zj9"/>
+                            <constraint firstItem="bpp-V5-fQy" firstAttribute="top" secondItem="p8e-xT-Dsd" secondAttribute="bottom" constant="30" id="t29-KO-c67"/>
+                            <constraint firstItem="3Q0-e1-jOL" firstAttribute="top" secondItem="OqW-ZX-B8t" secondAttribute="bottom" constant="45" id="tb0-qS-jKq"/>
+                            <constraint firstItem="p8e-xT-Dsd" firstAttribute="top" secondItem="UGr-0j-VoP" secondAttribute="bottom" constant="21" id="y19-yM-ddD"/>
+                            <constraint firstItem="uaj-rd-GVP" firstAttribute="top" secondItem="glN-Gt-ZxG" secondAttribute="bottom" constant="26" id="yha-gG-k56"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="checkButton" destination="glN-Gt-ZxG" id="0Xe-oe-uSQ"/>
+                        <outlet property="happinessSlider" destination="p8e-xT-Dsd" id="P0e-Wq-vJ3"/>
+                        <outlet property="happySwitch" destination="bpp-V5-fQy" id="yme-BT-byb"/>
+                        <outlet property="imageHeight" destination="3RE-fO-FI9" id="VBj-1A-1KS"/>
+                        <outlet property="passionStepper" destination="lCH-QY-hTI" id="kAg-la-p1F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Chb-BR-Qfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847.5" y="125.70422535211267"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Star" width="20" height="19"/>
         <image name="checked" width="34" height="34"/>
         <image name="unchecked" width="34" height="34"/>
     </resources>

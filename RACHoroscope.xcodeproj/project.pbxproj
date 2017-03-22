@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5D9EBE6493537AA11F28F6BC /* libPods-RACHoroscope.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1313DB1C5144A1C9613E14FE /* libPods-RACHoroscope.a */; };
 		B62A6BC71E812153009D9419 /* UIView+MyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B62A6BC61E812153009D9419 /* UIView+MyUtils.m */; };
+		B62A6BCA1E822819009D9419 /* FeelingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62A6BC91E822819009D9419 /* FeelingViewController.m */; };
 		B631922A1E75999300390319 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B63192291E75999300390319 /* main.m */; };
 		B631922D1E75999300390319 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B631922C1E75999300390319 /* AppDelegate.m */; };
 		B63192301E75999300390319 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B631922F1E75999300390319 /* ViewController.m */; };
@@ -24,6 +25,8 @@
 		2F1969FB5BE7903D99D68752 /* Pods-RACHoroscope.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACHoroscope.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACHoroscope/Pods-RACHoroscope.release.xcconfig"; sourceTree = "<group>"; };
 		B62A6BC51E812153009D9419 /* UIView+MyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MyUtils.h"; sourceTree = "<group>"; };
 		B62A6BC61E812153009D9419 /* UIView+MyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MyUtils.m"; sourceTree = "<group>"; };
+		B62A6BC81E822819009D9419 /* FeelingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeelingViewController.h; sourceTree = "<group>"; };
+		B62A6BC91E822819009D9419 /* FeelingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeelingViewController.m; sourceTree = "<group>"; };
 		B63192251E75999300390319 /* RACHoroscope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACHoroscope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63192291E75999300390319 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B631922B1E75999300390319 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +114,8 @@
 			children = (
 				B631922E1E75999300390319 /* ViewController.h */,
 				B631922F1E75999300390319 /* ViewController.m */,
+				B62A6BC81E822819009D9419 /* FeelingViewController.h */,
+				B62A6BC91E822819009D9419 /* FeelingViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				B631922D1E75999300390319 /* AppDelegate.m in Sources */,
 				B6C65CC81E80FC4500AC5BCE /* MainViewModel.m in Sources */,
 				B631922A1E75999300390319 /* main.m in Sources */,
+				B62A6BCA1E822819009D9419 /* FeelingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

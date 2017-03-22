@@ -66,7 +66,8 @@
     self.manButton.rac_command = self.viewModel.manCommand;
     
     @weakify(self);
-    [RACObserve(self.viewModel, gender)
+    [[RACObserve(self.viewModel, gender)
+      deliverOnMainThread]
      subscribeNext:^(NSNumber * _Nullable x) {
          @strongify(self);
          if (x == nil) {
@@ -83,7 +84,10 @@
     
     self.checkButton.rac_command = self.viewModel.checkCommand;
     
-    /* 这步非常慢，性能很差。 */
+    /* 这步非常慢，性能很差。
+     * show方法并没有运行在apple的main thread上，
+     * 而是在RAC的main thread scheduler上。
+     */
     [self.viewModel.checkCommand.executionSignals
      subscribeNext:^(RACSignal * _Nullable subscribeSignal) {
          [subscribeSignal
@@ -105,7 +109,9 @@
     UIAlertController *alertcontroller =
     [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *dismissAction =
-    [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:nil];
+    [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [self performSegueWithIdentifier:@"feel" sender:nil];
+    }];
     [alertcontroller addAction:dismissAction];
     
     [self presentViewController:alertcontroller animated:YES completion:nil];
