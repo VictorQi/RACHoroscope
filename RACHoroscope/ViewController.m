@@ -51,11 +51,11 @@
     RAC(self.viewModel, city) = self.cityTextField.rac_textSignal;
     RAC(self.viewModel, date) =
     [[[[self.datePicker
-       rac_signalForControlEvents:UIControlEventValueChanged]
-      startWith:self.datePicker]
-     map:^NSDate* (UIDatePicker *picker) {
-         return picker.date;
-     }]  distinctUntilChanged];
+        rac_signalForControlEvents:UIControlEventValueChanged]
+       startWith:self.datePicker]
+      map:^NSDate* (UIDatePicker *picker) {
+          return picker.date;
+      }]  distinctUntilChanged];
     
     RAC(self.nameTextField, layerBorderColor) = self.viewModel.nameColorSignal;
     RAC(self.emailTextField, layerBorderColor) = self.viewModel.emailColorSignal;
@@ -68,7 +68,6 @@
     @weakify(self);
     [RACObserve(self.viewModel, gender)
      subscribeNext:^(NSNumber * _Nullable x) {
-         NSLog(@"gender is %@", x);
          @strongify(self);
          if (x == nil) {
              self.womanButton.selected = NO;

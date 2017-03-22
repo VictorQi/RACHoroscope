@@ -97,14 +97,14 @@
     RACSignal *manSignal = [[self.manCommand.executionSignals switchToLatest] startWith:@(NO)];
     
     RACSignal *genderSignal =
-    [[RACSignal
-      combineLatest:@[
-                      womanSignal,
-                      manSignal
-                      ]
-      reduce:^NSNumber* (NSNumber *woman, NSNumber *man) {
-          return @(woman.boolValue || man.boolValue);
-      }] logAll];
+    [RACSignal
+     combineLatest:@[
+                     womanSignal,
+                     manSignal
+                     ]
+     reduce:^NSNumber* (NSNumber *woman, NSNumber *man) {
+         return @(woman.boolValue || man.boolValue);
+     }];
     
     self.finalSignal =
     [[RACSignal
