@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "NSString+Validator.h"
+#import "MainViewModel.h"
+#import "UIView+MyUtils.h"
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *cityTextField;
@@ -18,105 +20,55 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UIButton *checkButton;
 
-@property (strong, nonatomic) NSNumber *gender;
+@property (nonatomic, strong) NSNumber *gender;
+
+@property (nonatomic, strong) MainViewModel *viewModel;
+
 @end
 
 @implementation ViewController
 
-UIColor * _Nullable(^validToColor)(NSNumber * _Nullable) =
-^(NSNumber * _Nullable valid) {
-    return valid.boolValue ? [UIColor greenColor] : [UIColor clearColor];
-};
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (!self) { return nil; }
+    
+    self.viewModel = [[MainViewModel alloc] init];
+    
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self initializeLayerBorderWidth:1.0];
     
-    RACSignal<NSNumber *> *nameSignal =
-    [self.nameTextField.rac_textSignal
-     map:^NSNumber * _Nullable(NSString * _Nullable value) {
-         return @([value isValidPeopleNameOrCityName]);
-     }];
-    
-    RACSignal<NSNumber *> *emailSignal =
-    [self.emailTextField.rac_textSignal
-     map:^NSNumber * _Nullable(NSString * _Nullable value) {
-         return @([value isValidEmailAddress]);
-     }];
-    
-    RACSignal<NSNumber *> *citySignal =
-    [self.cityTextField.rac_textSignal
-     map:^NSNumber * _Nullable(NSString * _Nullable value) {
-         return @([value isValidPeopleNameOrCityName]);
-     }];
-    
-    RACSignal<NSNumber *> *dateSignal =
-    [[[self.datePicker rac_signalForControlEvents:UIControlEventValueChanged]
+    [self bind];
+}
+
+- (void)bind {
+    RAC(self.viewModel, name) = self.nameTextField.rac_textSignal;
+    RAC(self.viewModel, email) = self.emailTextField.rac_textSignal;
+    RAC(self.viewModel, city) = self.cityTextField.rac_textSignal;
+    RAC(self.viewModel, date) =
+    [[[[self.datePicker
+       rac_signalForControlEvents:UIControlEventValueChanged]
       startWith:self.datePicker]
-     map:^NSNumber *(UIDatePicker * picker) {
-         BOOL validDate = [picker.date timeIntervalSinceDate:[NSDate dateWithTimeIntervalSinceNow:0]] < 0;
-         return @(validDate);
-     }];
+     map:^NSDate* (UIDatePicker *picker) {
+         return picker.date;
+     }]  distinctUntilChanged];
     
-    RACSignal<NSNumber *> *womanSignal =
-    [[[self.womanButton rac_signalForControlEvents:UIControlEventTouchUpInside]
-      map:^NSNumber *(UIButton *button __unused) {
-          self.gender = @(NO);
-          return @(YES);
-      }]
-     startWith:@(NO)];
+    RAC(self.nameTextField, layerBorderColor) = self.viewModel.nameColorSignal;
+    RAC(self.emailTextField, layerBorderColor) = self.viewModel.emailColorSignal;
+    RAC(self.cityTextField, layerBorderColor) = self.viewModel.cityColorSignal;
+    RAC(self.datePicker, layerBorderColor) = self.viewModel.dateColorSignal;
     
-    RACSignal<NSNumber *> *manSignal =
-    [[[self.manButton rac_signalForControlEvents:UIControlEventTouchUpInside]
-      map:^NSNumber *(UIButton * button __unused) {
-          self.gender = @(YES);
-          return @(YES);
-      }]
-     startWith:@(NO)];
-    
-    RACSignal<NSNumber *> *genderSignal =
-    [RACSignal
-     combineLatest:@[womanSignal, manSignal]
-     reduce:^NSNumber *(NSNumber *woman, NSNumber *man) {
-         return @(woman.boolValue || man.boolValue);
-     }];
-    
-    [[nameSignal map:validToColor]
-     subscribeNext:^(UIColor * _Nullable color) {
-         self.nameTextField.layer.borderColor = color.CGColor;
-     }];
-    
-    [[emailSignal map:validToColor]
-     subscribeNext:^(UIColor * _Nullable color) {
-         self.emailTextField.layer.borderColor = color.CGColor;
-     }];
-    
-    [[citySignal map:validToColor]
-     subscribeNext:^(UIColor *color) {
-         self.cityTextField.layer.borderColor = color.CGColor;
-     }];
-    
-    [[[dateSignal map:validToColor]
-      skip:1]
-     subscribeNext:^(UIColor *color) {
-         self.datePicker.layer.borderColor = color.CGColor;
-     }];
-    
-    RACSignal<NSNumber *> *finalSignal =
-    [[RACSignal
-      combineLatest:@[nameSignal, emailSignal, citySignal, genderSignal, dateSignal]]
-     map:^NSNumber *(RACTuple *inputs) {
-         return @([inputs.rac_sequence all:^BOOL(NSNumber * _Nullable value) {
-             return value.boolValue;
-         }]);
-     }];
-    
-    RAC(self.checkButton, enabled) = finalSignal;
+    self.womanButton.rac_command = self.viewModel.womanCommand;
+    self.manButton.rac_command = self.viewModel.manCommand;
     
     @weakify(self);
-    [RACObserve(self, gender)
+    [RACObserve(self.viewModel, gender)
      subscribeNext:^(NSNumber * _Nullable x) {
+         NSLog(@"gender is %@", x);
          @strongify(self);
          if (x == nil) {
              self.womanButton.selected = NO;
@@ -129,6 +81,18 @@ UIColor * _Nullable(^validToColor)(NSNumber * _Nullable) =
              self.manButton.selected = NO;
          }
      }];
+    
+    self.checkButton.rac_command = self.viewModel.checkCommand;
+    
+    /* 这步非常慢，性能很差。 */
+    [self.viewModel.checkCommand.executionSignals
+     subscribeNext:^(RACSignal * _Nullable subscribeSignal) {
+         [subscribeSignal
+          subscribeCompleted:^{
+              @strongify(self);
+              [self showAlertWithTitle:@"Horoscope" message:@"You will have a wonderful day!"];
+          }];
+     }];
 }
 
 - (void)initializeLayerBorderWidth:(CGFloat)width {
@@ -138,9 +102,14 @@ UIColor * _Nullable(^validToColor)(NSNumber * _Nullable) =
     self.datePicker.layer.borderWidth = width;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
+    UIAlertController *alertcontroller =
+    [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *dismissAction =
+    [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:nil];
+    [alertcontroller addAction:dismissAction];
+    
+    [self presentViewController:alertcontroller animated:YES completion:nil];
 }
-
 
 @end

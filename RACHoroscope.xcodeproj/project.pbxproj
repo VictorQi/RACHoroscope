@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D9EBE6493537AA11F28F6BC /* libPods-RACHoroscope.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1313DB1C5144A1C9613E14FE /* libPods-RACHoroscope.a */; };
+		B62A6BC71E812153009D9419 /* UIView+MyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B62A6BC61E812153009D9419 /* UIView+MyUtils.m */; };
 		B631922A1E75999300390319 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B63192291E75999300390319 /* main.m */; };
 		B631922D1E75999300390319 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B631922C1E75999300390319 /* AppDelegate.m */; };
 		B63192301E75999300390319 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B631922F1E75999300390319 /* ViewController.m */; };
@@ -15,11 +16,14 @@
 		B63192381E75999300390319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63192361E75999300390319 /* LaunchScreen.storyboard */; };
 		B6B0C8021E7F7D58007E5ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B0C8011E7F7D58007E5ADB /* Assets.xcassets */; };
 		B6B0C8081E7F81D0007E5ADB /* NSString+Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B0C8071E7F81D0007E5ADB /* NSString+Validator.m */; };
+		B6C65CC81E80FC4500AC5BCE /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C65CC71E80FC4500AC5BCE /* MainViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1313DB1C5144A1C9613E14FE /* libPods-RACHoroscope.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RACHoroscope.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F1969FB5BE7903D99D68752 /* Pods-RACHoroscope.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACHoroscope.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACHoroscope/Pods-RACHoroscope.release.xcconfig"; sourceTree = "<group>"; };
+		B62A6BC51E812153009D9419 /* UIView+MyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MyUtils.h"; sourceTree = "<group>"; };
+		B62A6BC61E812153009D9419 /* UIView+MyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MyUtils.m"; sourceTree = "<group>"; };
 		B63192251E75999300390319 /* RACHoroscope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACHoroscope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63192291E75999300390319 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B631922B1E75999300390319 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,6 +37,8 @@
 		B6B0C8011E7F7D58007E5ADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6B0C8061E7F81D0007E5ADB /* NSString+Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validator.h"; sourceTree = "<group>"; };
 		B6B0C8071E7F81D0007E5ADB /* NSString+Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validator.m"; sourceTree = "<group>"; };
+		B6C65CC61E80FC4500AC5BCE /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
+		B6C65CC71E80FC4500AC5BCE /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewModel.m; sourceTree = "<group>"; };
 		E4C03DFED8D612CB23FE4855 /* Pods-RACHoroscope.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACHoroscope.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACHoroscope/Pods-RACHoroscope.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +90,7 @@
 				B63192361E75999300390319 /* LaunchScreen.storyboard */,
 				B63192391E75999300390319 /* Info.plist */,
 				B6B0C8051E7F818D007E5ADB /* Framework Extensions */,
+				B6C65CC51E80FC1B00AC5BCE /* ViewModels */,
 				B6B0C8031E7F8143007E5ADB /* Views */,
 				B6B0C8041E7F8157007E5ADB /* Stroryboard & Assets */,
 				B63192281E75999300390319 /* Supporting Files */,
@@ -122,8 +129,19 @@
 			children = (
 				B6B0C8061E7F81D0007E5ADB /* NSString+Validator.h */,
 				B6B0C8071E7F81D0007E5ADB /* NSString+Validator.m */,
+				B62A6BC51E812153009D9419 /* UIView+MyUtils.h */,
+				B62A6BC61E812153009D9419 /* UIView+MyUtils.m */,
 			);
 			name = "Framework Extensions";
+			sourceTree = "<group>";
+		};
+		B6C65CC51E80FC1B00AC5BCE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B6C65CC61E80FC4500AC5BCE /* MainViewModel.h */,
+				B6C65CC71E80FC4500AC5BCE /* MainViewModel.m */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 		D3797BF24BA7B6C48142665A /* Frameworks */ = {
@@ -257,9 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62A6BC71E812153009D9419 /* UIView+MyUtils.m in Sources */,
 				B6B0C8081E7F81D0007E5ADB /* NSString+Validator.m in Sources */,
 				B63192301E75999300390319 /* ViewController.m in Sources */,
 				B631922D1E75999300390319 /* AppDelegate.m in Sources */,
+				B6C65CC81E80FC4500AC5BCE /* MainViewModel.m in Sources */,
 				B631922A1E75999300390319 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
